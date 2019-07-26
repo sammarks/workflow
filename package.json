@@ -6,6 +6,7 @@
   "main": "dist/workflow.umd.js",
   "module": "dist/workflow.es5.js",
   "typings": "dist/types/workflow.d.ts",
+  "private": false,
   "files": [
     "dist"
   ],
