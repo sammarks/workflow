@@ -20,7 +20,7 @@ export class WorkflowError extends Error implements WorkflowErrorInterface {
   originalException: Error
   stepName: string
 
-  constructor (stepName: string, originalException: Error) {
+  constructor(stepName: string, originalException: Error) {
     super(`Workflow error executing '${stepName}': ${originalException}`) /* istanbul ignore next */
     this.stepName = stepName
     this.originalException = originalException
@@ -30,14 +30,18 @@ export class WorkflowError extends Error implements WorkflowErrorInterface {
 export class WorkflowRevertError extends WorkflowError implements WorkflowRevertErrorInterface {
   originalWorkflowError: WorkflowError
 
-  constructor (stepName: string, error: Error, originalWorkflowError: WorkflowError) {
+  constructor(stepName: string, error: Error, originalWorkflowError: WorkflowError) {
     super(stepName, error) /* istanbul ignore next */
     this.originalWorkflowError = originalWorkflowError
     this.message = `Workflow error executing '${originalWorkflowError.stepName}': ${originalWorkflowError.originalException}\nAdditionally, error reverting step '${stepName}': ${error}`
   }
 }
 
-export const execute = async <T extends StepContext>(name: string, steps: Array<Step>, context: T): Promise<T> => {
+export const execute = async <T extends StepContext>(
+  name: string,
+  steps: Array<Step>,
+  context: T
+): Promise<T> => {
   const revertSteps: Array<Step> = []
   console.info(`Starting workflow: '${name}'`)
   for (let i = 0; i < steps.length; i++) {
