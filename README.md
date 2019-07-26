@@ -7,7 +7,7 @@
 [![Dev Dependencies](https://david-dm.org/sammarks/workflow/dev-status.svg)](https://david-dm.org/sammarks/workflow?type=dev)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://paypal.me/sammarks15)
 
-`workflow` is a NodeJS library designed to facilitate the execution of simple workflows with
+`workflow` is a Node JS library designed to facilitate the execution of simple workflows with
 rollback support. This allows you to take small units of code and combine them together into
 a larger workflow to accomplish a single large task.
 
