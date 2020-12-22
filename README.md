@@ -1,7 +1,7 @@
 ![][header-image]
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![Travis](https://img.shields.io/travis/sammarks/workflow.svg)](https://travis-ci.org/sammarks/workflow)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sammarks/workflow/Build%20and%20Release)
 [![Coveralls](https://img.shields.io/coveralls/sammarks/workflow.svg)](https://coveralls.io/github/sammarks/workflow)
 [![Dev Dependencies](https://david-dm.org/sammarks/workflow/dev-status.svg)](https://david-dm.org/sammarks/workflow?type=dev)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://paypal.me/sammarks15)
