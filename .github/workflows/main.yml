@@ -84,6 +84,7 @@ jobs:
             ${{ runner.os }}-v2-node-12-
       - run: npm install
         if: steps.cache.outputs.cache-hit != 'true'
+      - run: npm run build
       - run: npm run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
