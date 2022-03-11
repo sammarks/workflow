@@ -8,7 +8,6 @@
   "typings": "dist/types/workflow.d.ts",
   "private": false,
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/",
     "access": "public"
   },
   "files": [
