@@ -89,8 +89,8 @@ export const execute = async <T extends StepContext>(
       debug(`- Step: ${step.name}`)
       await step.run(context)
     } catch (e) {
-      console.error(` Failed.`)
-      console.error(e)
+      debug(` Failed.`)
+      debug(e)
       const workflowError = new WorkflowError(step.name, e)
       try {
         await execute(`${name} (revert)`, revertSteps, context)
